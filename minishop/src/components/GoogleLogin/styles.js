@@ -6,7 +6,10 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.darkGray,
         borderRadius: 14,
         width: '40%',
+        height: 60,
         alignSelf: 'center',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     image: {
         width: 30,

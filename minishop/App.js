@@ -14,28 +14,59 @@ import { createNativeStackNavigator} from '@react-navigation/native-stack';
 import { colors } from './src/utils/colors';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import iconSet from '@expo/vector-icons/build/FontAwesome5';
+import { AntDesign } from '@expo/vector-icons'; 
+
+// import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const Tabs = () => {
-  <Tab.Navigator options={{ headerShown : false}}>
-    <Tab.Screen name='Home' component={Home} />
-    <Tab.Screen name='Favorites' component={Favorites} />
-    <Tabs.Screen name='Profile' component={Profile} />
-  </Tab.Navigator>
+// const Tabs = () => {
+//   <Tab.Navigator options={{ headerShown : false}}>
+//     <Tab.Screen name='Home' component={Home} />
+//     <Tab.Screen name='Favorites' component={Favorites} />
+//     <Tabs.Screen name='Profile' component={Profile} />
+//   </Tab.Navigator>
+// }
+function Tabs() {
+  return (
+    <Tab.Navigator screenOptions={({ route }) => ({
+      headerShown: false,
+      tabBarShowLabel: false,
+      tabBarStyle: { borderTopColor: colors.lightGray },
+      tabBarInactiveBackgroundColor: colors.blue ,
+      tabBarActiveBackgroundColor: colors.lightGray, 
+      
+    })}>
+      <Tab.Screen name='Home' component={Home} options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" color={color} size={size} />
+          ),
+        }} />
+      <Tab.Screen name='Favorites' component={Favorites} options={{
+          tabBarLabel: 'Heart',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="heart" color={color} size={size} />
+          ),
+        }} />
+      {/* <Tabs.Screen name='Profile' component={Profile} /> */}
+    </Tab.Navigator>
+  )
 }
 export default function App() {
   // useEffect(() => {
 
   // }, [])
-  const isSignedin = false;
+  const isSignedin = true;
   const theme = {
     colors: {
       background: colors.white,
     }
   }
   return (
-    // <SafeAreaView>
     <SafeAreaProvider>
       <NavigationContainer theme={theme}>
         <Stack.Navigator>
@@ -53,15 +84,7 @@ export default function App() {
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
-    // </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+

@@ -9,6 +9,5 @@ export const styles = StyleSheet.create({
         marginTop: 16,
     },
     productsList: {
-        paddingHorizontal: 16,
     }
 })

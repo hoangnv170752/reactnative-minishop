@@ -47,7 +47,7 @@ const Home = () => {
     return (
         <SafeAreaView>
             <ScrollView style={styles.container}>
-                <Header showSearch title="Find All You Need" />
+                <Header showSearch showLogout title="Find All You Need" />
                 <FlatList style={styles.list} horizontal data={categories} renderItem={renderCategoryItem} keyExtractor={(item, index) => String(index)} />
                 <FlatList
                     style={styles.productsList}

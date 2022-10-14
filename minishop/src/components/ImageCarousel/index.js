@@ -4,7 +4,7 @@ import { styles } from './styles';
 
 const { width } = Dimensions.get('window');
 
-const ImageCarousel = ( {image}) => {
+const ImageCarousel = ( {images}) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const handleScrollEnd = (e) => {

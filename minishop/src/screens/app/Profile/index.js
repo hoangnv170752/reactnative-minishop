@@ -11,10 +11,10 @@ const Profile = ({navigation}) => {
         console.log('log out clicked');
     }
     const onSettingsPress = () => {
-        navigation.navigate('MyListings');
+        navigation.navigate('Settings');
     }
     const onMyListingsPress = () => {
-        navigation.navigate('CreateListings');
+        navigation.navigate('MyListings');
     }
     const onNewListingPress = () => {
         navigation.navigate('CreateListing');

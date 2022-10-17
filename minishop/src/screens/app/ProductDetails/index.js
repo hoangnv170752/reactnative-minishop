@@ -36,7 +36,7 @@ const ProductDetails = ({route, navigation}) => {
             </ScrollView>
             <View style={styles.footer}>
                 <Pressable style={styles.bookmarkContainer}>
-                    <Image style={styles.bookmarkIcon} source={require('../../../assets/favicon.png')} />
+                    <Image style={styles.bookmarkIcon} source={require('../../../assets/bookmark_blue.png')} />
                 </Pressable>
                 <Button onPress={onContact} title="Contact Seller" />
             </View>

@@ -1,5 +1,4 @@
 import axios from "axios";
-import Config from 'react-native-config';
 export const request = ({url, method, data}) => {
     return axios({
         method: method || 'get',
@@ -8,4 +7,3 @@ export const request = ({url, method, data}) => {
     });
 }
 
-request({url, data})

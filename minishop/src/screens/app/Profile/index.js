@@ -4,7 +4,7 @@ import {styles} from './styles';
 import Header from '../../../components/Header';
 import ListItem from '../../../components/ListItem';
 import Button from '../../../components/Button';
-
+import CreateListing from '../CreateListing';
 const Profile = ({navigation}) => {
     const num = 10;
     const onLogout = () => {

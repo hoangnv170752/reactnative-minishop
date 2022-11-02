@@ -20,7 +20,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import iconSet from '@expo/vector-icons/build/FontAwesome5';
 import { AntDesign } from '@expo/vector-icons'; 
 import QRcode from './src/screens/QRCode';
-
+import MyListings from './src/screens/app/MyListings';
 // import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Stack = createNativeStackNavigator();
@@ -32,7 +32,7 @@ const ProfileStack = () => {
       <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
       <Stack.Screen name="Settings" component={Settings} options={{ headerShown: false }} />
       <Stack.Screen name="CreateListing" component={CreateListing} options={{ headerShown: false }} />
-      {/* <Stack.Screen name="MyListings" component={MyListings} options={{ headerShown: false }} /> */}
+      <Stack.Screen name="MyListings" component={MyListings} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }
